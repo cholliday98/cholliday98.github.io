@@ -22,15 +22,15 @@ function unlock(){
 
 var f=0;
 function failurecount(){
-	f++;
-	console.log('"Failure #" + f');
+	f+= 1;
+	console.log("Failure #" + f);
 }
 
 function actionclick(type){
 	if(type == "pos"){
-		pstbtn.setAttribute('onclick','function(){failurecount();}');
-		upvbtn.setAttribute('onclick','function(){failurecount();}');
-		golbtn.setAttribute('onclick','function(){failurecount();}');
+		pstbtn.setAttribute('onclick','failurecount()');
+		upvbtn.setAttribute('onclick','failurecount()');
+		golbtn.setAttribute('onclick','failurecount()');
 		setTimeout(function(){
 			pstbtn.setAttribute('onclick','actionclick("pos")');
 			upvbtn.setAttribute('onclick','actionclick("upv")');
@@ -39,9 +39,9 @@ function actionclick(type){
 			pstcnt.innerHTML= post[0];
 		},post[3]);
 	}else if(type == "upv"){
-		pstbtn.setAttribute('onclick','function(){failurecount();}');
-		upvbtn.setAttribute('onclick','function(){failurecount();}');
-		golbtn.setAttribute('onclick','function(){failurecount();}');
+		pstbtn.setAttribute('onclick','failurecount()');
+		upvbtn.setAttribute('onclick','failurecount()');
+		golbtn.setAttribute('onclick','failurecount()');
 		setTimeout(function(){
 			pstbtn.setAttribute('onclick','actionclick("pos")');
 			upvbtn.setAttribute('onclick','actionclick("upv")');
@@ -50,9 +50,9 @@ function actionclick(type){
 			upvcnt.innerHTML= upvote[0];
 		},upvote[3]);
 	}else if(type == "gol"){
-		pstbtn.setAttribute('onclick','function(){failurecount();}');
-		upvbtn.setAttribute('onclick','function(){failurecount();}');
-		golbtn.setAttribute('onclick','function(){failurecount();}');
+		pstbtn.setAttribute('onclick','failurecount()');
+		upvbtn.setAttribute('onclick','failurecount()');
+		golbtn.setAttribute('onclick','failurecount()');
 		setTimeout(function(){
 			pstbtn.setAttribute('onclick','actionclick("pos")');
 			upvbtn.setAttribute('onclick','actionclick("upv")');
