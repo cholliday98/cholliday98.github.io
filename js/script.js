@@ -23,7 +23,7 @@ function unlock(){
 var f=0;
 function failurecount(){
 	f++;
-	console.log("Failure #" + f);
+	console.log('"Failure #" + f');
 }
 
 function actionclick(type){
