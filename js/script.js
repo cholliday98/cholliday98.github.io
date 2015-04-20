@@ -20,17 +20,25 @@ function unlock(){
 	}
 }
 
-var f=0;
-function failurecount(){
-	f+= 1;
-	console.log("Failure #" + f);
+var f= [0, 0, 0];
+function failurecount(type){
+	if (type == 'pos') {;
+		f[0]+= 1;
+		console.log("This isn't Tumblr slow the fuck down.  I've calmed you " + f[0] + " times, already");
+	}else if(type == 'upv'){
+		f[1]+= 1;
+		console.log("You can't love everything.  I've depressed you " + f[1] + " times, already");
+	}else if (type == 'gol'){
+		f[2]+= 1;
+		console.log("I've only got one pickaxe.  I've repremanded you " + f[2] +" times, already");
+	}
 }
 
 function actionclick(type){
 	if(type == "pos"){
-		pstbtn.setAttribute('onclick','failurecount()');
-		upvbtn.setAttribute('onclick','failurecount()');
-		golbtn.setAttribute('onclick','failurecount()');
+		pstbtn.setAttribute('onclick','failurecount("pos")');
+		upvbtn.setAttribute('onclick','failurecount("upv")');
+		golbtn.setAttribute('onclick','failurecount("gol")');
 		setTimeout(function(){
 			pstbtn.setAttribute('onclick','actionclick("pos")');
 			upvbtn.setAttribute('onclick','actionclick("upv")');
@@ -39,9 +47,9 @@ function actionclick(type){
 			pstcnt.innerHTML= post[0];
 		},post[3]);
 	}else if(type == "upv"){
-		pstbtn.setAttribute('onclick','failurecount()');
-		upvbtn.setAttribute('onclick','failurecount()');
-		golbtn.setAttribute('onclick','failurecount()');
+		pstbtn.setAttribute('onclick','failurecount("pos")');
+		upvbtn.setAttribute('onclick','failurecount("upv")');
+		golbtn.setAttribute('onclick','failurecount("gol")');
 		setTimeout(function(){
 			pstbtn.setAttribute('onclick','actionclick("pos")');
 			upvbtn.setAttribute('onclick','actionclick("upv")');
@@ -50,9 +58,9 @@ function actionclick(type){
 			upvcnt.innerHTML= upvote[0];
 		},upvote[3]);
 	}else if(type == "gol"){
-		pstbtn.setAttribute('onclick','failurecount()');
-		upvbtn.setAttribute('onclick','failurecount()');
-		golbtn.setAttribute('onclick','failurecount()');
+		pstbtn.setAttribute('onclick','failurecount("pos")');
+		upvbtn.setAttribute('onclick','failurecount("upv")');
+		golbtn.setAttribute('onclick','failurecount("gol")');
 		setTimeout(function(){
 			pstbtn.setAttribute('onclick','actionclick("pos")');
 			upvbtn.setAttribute('onclick','actionclick("upv")');
