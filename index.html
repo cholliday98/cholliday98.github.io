@@ -14,13 +14,7 @@
     				<div class="navbar-header">
     					<a class="navbar-brand" href="#">Reddit-Incremental</a>
     				</div>
-    				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      					<ul class="nav navbar-nav">
-        					<li><a>Post:</a></li><li><a id="pst">0</a></li>
-        					<li><a>Upvotes:</a></li><li><a id="upv">0</a></li>
-        					<li><a>Reddit Gold:</a></li><li><a id="gol">0</a></li>
-        				</ul>
-    				</div>
+        			
     			</div>
     		</nav>
 		</div>
@@ -28,41 +22,43 @@
 			<div class="panel panel-default">
   				<div class="panel-body">
     				<div id="button_holder" onclick="actionclick('pos')">
-						<a id="button_post">Submit a new post</a>
+						<span class="btnbadge badge" id="pos">Post: 0</span><a id="button_post">Submit a new post</a>
 						<div class="nub"> </div>
 					</div>
 					<div id="upvotebutton_holder" onclick="actionclick('upv')"> 
-						<a id="get-upvote-button"> </a>
+						<span class="btnbadge badge" id="upv">Upvotes: 0</span><a id="get-upvote-button"> </a>
 						<div class="nub"> </div>
 					</div>
 					<div id="goldbutton_holder" onclick="actionclick('gol')">
-						<a class="mine-gold-button">mine reddit gold</a>
+						<a class="mine-gold-button"><span class="btnbadge badge" id="gol">Reddit Gold: 0</span>mine reddit gold</a>
 					</div>
   				</div>
 			</div>
 		</div>
+		<div class="back">
 			<ul id="tabs" class="nav nav-pills">
 				<li style="width: 49%;" class="active"><a href="#item" data-toggle="tab" aria-expanded="true">Item</a></li>
   				<li style="width: 49%;" class=""><a href="#upgrade" data-toggle="tab" aria-expanded="false">Upgrade</a></li>
 			</ul>
 			<div class="tab-content">
   				<div  class="tab-pane fade active in shop" id="item">
-  					<a href="#" class="button btn btn-primary"><span class="badge">0</span>Redditor</a><br />
-  					<a href="#" class="button btn btn-primary"><span class="badge">0</span>Bathing Thinker</a><br />
-  					<a href="#" class="button btn btn-primary"><span class="badge">0</span>Daily Learners</a><br />
-  					<a href="#" class="button btn btn-primary"><span class="badge">0</span>Photoshopper</a><br />
-  					<a href="#" class="button btn btn-primary"><span class="badge">0</span>Asker of Anything</a><br />
-  					<a href="#" class="button btn btn-primary"><span class="badge">0</span>Great Redditor</a><br />
-  					<a href="#" class="button btn btn-primary"><span class="badge">0</span>Geographist</a><br />
-  					<a href="#" class="button btn btn-primary"><span class="badge">0</span>Incrementalist</a><br />
-  					<a href="#" class="button btn btn-primary"><span class="badge">0</span>Gamer</a><br />
-  					<a href="#" class="button btn btn-primary"><span class="badge">0</span>Comedian</a><br />
-					<a href="#" class="button btn btn-primary"><span class="badge">0</span>Elite Redditor</a><br />
+					<a onclick="buy(1)" class="button btn btn-primary"><span id="1" class="shopbadge badge">0</span>Redditor</a><br />
+  					<a class="button btn btn-primary"><span id="2" class="shopbadge badge">0</span>Bathing Thinker</a><br />
+  					<a class="button btn btn-primary"><span id="3" class="shopbadge badge">0</span>Daily Learners</a><br />
+  					<a class="button btn btn-primary"><span id="4" class="shopbadge badge">0</span>Photoshopper</a><br />
+  					<a class="button btn btn-primary"><span id="5" class="shopbadge badge">0</span>Asker of Anything</a><br />
+  					<a class="button btn btn-primary"><span id="6" class="shopbadge badge">0</span>Great Redditor</a><br />
+  					<a class="button btn btn-primary"><span id="7" class="shopbadge badge">0</span>Geographist</a><br />
+  					<a class="button btn btn-primary"><span id="8" class="shopbadge badge">0</span>Incrementalist</a><br />
+  					<a class="button btn btn-primary"><span id="9" class="shopbadge badge">0</span>Gamer</a><br />
+  					<a class="button btn btn-primary"><span id="10" class="shopbadge badge">0</span>Comedian</a><br />
+					<a class="button btn btn-primary"><span id="11" class="shopbadge badge">0</span>Elite Redditor</a><br />
  			 	</div>
  			 	<div class="tab-pane fade shop" id="upgrade">
-    				<p>This pane will be used for Upgrades!</p>
+    				<p>hey</p>
  			 	</div>
  			 </div>
+ 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"> </script>
 		<script src="js/bootstrap.min.js"> </script>
 	</body>
